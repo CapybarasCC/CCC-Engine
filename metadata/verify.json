@@ -1,0 +1,909 @@
+[
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 10000,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Blue"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Green"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Purple"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Orange"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Yellow"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Rose"
+      },
+      {
+        "trait_type": "Background",
+        "value": "Sand"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "None"
+      },
+      {
+        "trait_type": "Body",
+        "value": "All We Need Is Love"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Armor"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Astronaut"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Baggins"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Banana"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Bartender"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Basket Shirt"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Bathrobe"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Batman"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Boxer"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Checkered Shirt"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Chemise"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Chemise Bordeaux"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Doctor"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Drip"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Fancy"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Fireman"
+      },
+      {
+        "trait_type": "Body",
+        "value": "General Uniform"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Grey Shirt"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Hoodie"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Kimono"
+      },
+      {
+        "trait_type": "Body",
+        "value": "King"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Leather Jacket"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Liqui Liqui"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Military Jacket"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Mummy"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Plumber"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Prisoner"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Suit"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Tattoo Tank"
+      },
+      {
+        "trait_type": "Body",
+        "value": "The Sandbox Shirt"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Turtle Neck"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Vampire"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Viking"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Witcher"
+      },
+      {
+        "trait_type": "Face",
+        "value": "None"
+      },
+      {
+        "trait_type": "Face",
+        "value": "3D Glasses"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Anime Blush"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Beauty Mask"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Blindfold"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Dirt"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Drunk Tattoos"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Eye Black"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Freckles"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Mike Tyson Tattoo"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Monocle"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Patch"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Scar"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Small Glasses"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Stickers"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Sticky Notes"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Stubble"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Sun Glasses"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Sweat"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Tattoos"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Thief"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Thick Glasses"
+      },
+      {
+        "trait_type": "Face",
+        "value": "X Scar"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "None"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Alien"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Anime"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Bored"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Drop Shape"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Goat"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Laser"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Lashes"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Open"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Reptile"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Scarred"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Shoujo"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Simple"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Sleepy"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Simple"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Sparkly"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Stoned"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Surprised"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Teary"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Tired"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "uwu"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "X"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "None"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Aristocrat"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Brackets"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Drool"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Fangs"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Goldtooth"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Grills"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Joint"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Lipstick"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Lollipop"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Lumberjack"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Party Whistle"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Pipe"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Popsicle"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Septum"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Sick"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Smile"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Teeth"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Toast"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Tongue"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "uwu"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Wizard"
+      },
+      {
+        "trait_type": "Head",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Airpods"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Bald"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Bandana"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Bangs"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Beanie"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Beret"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Bird"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Brushed"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Bunny"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Cap"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Cowboy"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Cow Lick"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Crown"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Flower"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Hairclips"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Halo"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Long Hair"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Manbun"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Medusa"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Mohawk"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Mouse"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Orange"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Pirate"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Rasta"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Sakkat"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Small Afro"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Sombrero"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Tiara"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Unicorn"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Ushanka"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Visor"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Slime"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "None"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "Brain"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "Fish"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "Ocarina"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "Orange"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "Peanut"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "Pizza"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "Pokeball"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "Tissues"
+      },
+      {
+        "trait_type": "Slime Head",
+        "value": "Diamond"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "None"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Arepa"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Bomb"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Clock"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Game"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Heart"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Plant"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Wrench"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Baseball"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Hardwallet"
+      },
+      {
+        "trait_type": "Slime Right Organ",
+        "value": "Heart Lock"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "None"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "Bitcoin"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "Chocolate"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "Empanada"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "ETH Cell"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "Fried Egg"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "GlowStick"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "Malta"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "Shuriken"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "Sushi"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "Yoyo"
+      },
+      {
+        "trait_type": "Slime Left Organ",
+        "value": "Key"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Robot"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "None"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Crane"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Exhaust"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Gas"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Jetpack"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Neon"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Spider"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Swiss Army"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Tank"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Tentacles"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "Wires"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "None"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "Bomb"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "Capybara"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "Circuits"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "DO NOT PUSH"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "FANCY DO NOT PUSH"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "Fridge"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "Screen"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "Valves"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "Wrench"
+      },
+      {
+        "trait_type": "Robot Eyes",
+        "value": "Bolt"
+      },
+      {
+        "trait_type": "Robot Eyes",
+        "value": "LED"
+      },
+      {
+        "trait_type": "Robot Eyes",
+        "value": "Light Bulb"
+      },
+      {
+        "trait_type": "Robot Eyes",
+        "value": "Pilot"
+      },
+      {
+        "trait_type": "Robot Eyes",
+        "value": "Webcam"
+      },
+      {
+        "trait_type": "Robot Eyes",
+        "value": "Empty"
+      },
+      {
+        "trait_type": "Robot Eyes",
+        "value": "Rhombus"
+      },
+      {
+        "trait_type": "Robot Eyes",
+        "value": "Speed Dial"
+      },
+      {
+        "trait_type": "Robot Head",
+        "value": "None"
+      },
+      {
+        "trait_type": "Robot Head",
+        "value": "Antenna"
+      },
+      {
+        "trait_type": "Robot Head",
+        "value": "Charger"
+      },
+      {
+        "trait_type": "Robot Head",
+        "value": "Goggles"
+      },
+      {
+        "trait_type": "Robot Head",
+        "value": "Modem"
+      },
+      {
+        "trait_type": "Robot Head",
+        "value": "Oil"
+      },
+      {
+        "trait_type": "Robot Head",
+        "value": "Solar Panel"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Rick"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Evil Kermit"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Zuko"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Homer"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Nezuko"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Link"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Saiyan"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Neo"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Gold Capybot"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Slime Tribal"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  }
+]

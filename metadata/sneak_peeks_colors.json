@@ -1,0 +1,427 @@
+[
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Purple"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Basket Shirt"
+      },
+      {
+        "trait_type": "Face",
+        "value": "None"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Simple"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "None"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Blue"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Checkered Shirt"
+      },
+      {
+        "trait_type": "Face",
+        "value": "None"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Simple"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Orange"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Sand"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Fancy"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Monocle"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Simple"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Pipe"
+      },
+      {
+        "trait_type": "Head",
+        "value": "None"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Green"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Tattoo Tank"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Tattoos"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Open"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Smile"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Bald"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Orange"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "All We Need Is Love"
+      },
+      {
+        "trait_type": "Face",
+        "value": "None"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Stoned"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Joint"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Rasta"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Rose"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "None"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Sweat"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Surprised"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Bunny"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Purple"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Bathrobe"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Freckles"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Lashes"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "None"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Green"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Mummy"
+      },
+      {
+        "trait_type": "Face",
+        "value": "None"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "X"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "Tongue"
+      },
+      {
+        "trait_type": "Head",
+        "value": "None"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Sand"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Boxer"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Mike Tyson Tattoo"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "Bruise"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "None"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Sand"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Natural"
+      },
+      {
+        "trait_type": "Body",
+        "value": "Grey Shirt"
+      },
+      {
+        "trait_type": "Face",
+        "value": "Sticky Notes"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "uwu"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "uwu"
+      },
+      {
+        "trait_type": "Head",
+        "value": "Brushed"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 9315,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Sand"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Robot"
+      },
+      {
+        "trait_type": "Robot Back",
+        "value": "None"
+      },
+      {
+        "trait_type": "Robot Body",
+        "value": "Screen"
+      },
+      {
+        "trait_type": "Robot Eyes",
+        "value": "Bolt"
+      },
+      {
+        "trait_type": "Robot Head",
+        "value": "None"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  }
+]

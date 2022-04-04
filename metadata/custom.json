@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Your Collection #1",
+    "description": "Remember to replace this description",
+    "image": "ipfs://NewUriToReplace/1.gif",
+    "dna": "0aae2cdd40633a5d5a24a7c893394916e8d593d7",
+    "edition": 10000,
+    "date": 1640545413366,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Sand"
+      },
+      {
+        "trait_type": "Type",
+        "value": "Homer"
+      },
+      {
+        "trait_type": "Body",
+        "value": "None"
+      },
+      {
+        "trait_type": "Face",
+        "value": "None"
+      },
+      {
+        "trait_type": "Eyes",
+        "value": "None"
+      },
+      {
+        "trait_type": "Mouth",
+        "value": "None"
+      },
+      {
+        "trait_type": "Head",
+        "value": "None"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  }
+]
