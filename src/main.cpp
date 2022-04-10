@@ -27,6 +27,17 @@
  * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
+/**
+ * @file main.cpp
+ * @author Capybaras Country Club team (capybaras.country.club@gmail.com)
+ * @brief A fully animated NFT collection living in the ETH blockchain
+ * @version 1.0
+ * @date 2022-04-04
+ *
+ * @copyright Capybaras Country Club (c) 2022
+ *
+ */
+
 #include <SFML/Graphics.hpp>
 #include <algorithm>
 #include <boost/program_options.hpp>
@@ -43,28 +54,28 @@ using namespace spine;
 using namespace nlohmann;
 #include <memory>
 
-bool         animation_completed = false;
-float        scale = 0.3;
-float        image_size = 2000 * scale;
-const size_t collection_size = 3;
-std::string  metadata_info = "../metadata/_metadata.json";
-int          initial_iteration = 0;
-int          final_iteration = 7700;
-bool         debug_attributes = false;
-bool         gif_collection = false;
-bool         img_collection = false;
-bool         verify_collection = false;
-bool         merge_gifs = false;
-bool         gif_started = false;
-size_t       frames_per_gif = 0;
-float        delta_offset = 0;
-std::string  custom_name = "custom.gif";
-std::string  output_path = "../results/gif/";
-bool         custom_collection = false;
-std::string  scale_format = "0.3";
+// Parameters
+std::string metadata_info = "../metadata/_metadata.json";
+std::string output_path = "../results/gif/";
+std::string scale_format = "0.3";
+bool animation_completed = false;
+bool verify_collection = false;
+bool custom_collection = false;
+bool debug_attributes = false;
+bool gif_collection = false;
+bool img_collection = false;
+bool gif_started = false;
+bool merge_gifs = false;
+int initial_iteration = 0;
+int final_iteration = 7700;
+size_t frames_per_gif = 0;
+float IMAGE_SIZE = 2000 * SCALE;
+float delta_offset = 0;
+float SCALE = 0.3;
+// Parameters
 
-template<typename T, typename... Args>
-unique_ptr<T> make_unique_test(Args&&... args)
+template <typename T, typename... Args>
+unique_ptr<T> make_unique_test(Args &&...args)
 {
     return unique_ptr<T>(new T(forward<Args>(args)...));
 }
@@ -72,20 +83,19 @@ unique_ptr<T> make_unique_test(Args&&... args)
 class Attributes
 {
 public:
-    std::string       trait_type;
-    std::string       value;
+    std::string trait_type;
+    std::string value;
     const std::string getFullName() { return trait_type + string("/") + value; };
 
     Attributes(std::string _trait_type, std::string _value)
-      : trait_type(_trait_type)
-      , value(_value){};
+        : trait_type(_trait_type), value(_value){};
 };
 
-void callback(AnimationState* state, EventType type, TrackEntry* entry, Event* event)
+void callback(AnimationState *state, EventType type, TrackEntry *entry, Event *event)
 {
     SP_UNUSED(state);
-    const String& animationName =
-      (entry && entry->getAnimation()) ? entry->getAnimation()->getName() : String("");
+    const String &animationName =
+        (entry && entry->getAnimation()) ? entry->getAnimation()->getName() : String("");
 
     switch (type)
     {
@@ -102,9 +112,6 @@ void callback(AnimationState* state, EventType type, TrackEntry* entry, Event* e
         // printf("%d complete: %s\n", entry->getTrackIndex(), animationName.buffer());
         animation_completed = true;
         break;
-    case EventType_Dispose:
-        printf("%d dispose: %s\n", entry->getTrackIndex(), animationName.buffer());
-        break;
     case EventType_Event:
         printf("%d event: %s, %s: %d, %f, %s %f %f\n",
                entry->getTrackIndex(),
@@ -120,10 +127,10 @@ void callback(AnimationState* state, EventType type, TrackEntry* entry, Event* e
     fflush(stdout);
 }
 
-shared_ptr<SkeletonData> readSkeletonBinaryData(const char* filename, Atlas* atlas, float scale)
+shared_ptr<SkeletonData> readSkeletonBinaryData(const char *filename, Atlas *atlas, float scale_)
 {
     SkeletonBinary binary(atlas);
-    binary.setScale(scale);
+    binary.setScale(scale_);
     auto skeletonData = binary.readSkeletonDataFile(filename);
     if (!skeletonData)
     {
@@ -133,15 +140,15 @@ shared_ptr<SkeletonData> readSkeletonBinaryData(const char* filename, Atlas* atl
     return shared_ptr<SkeletonData>(skeletonData);
 }
 
-void createGifCollection(void        func(SkeletonData* skeletonData, Atlas* atlas),
-                         const char* binaryName,
-                         const char* atlasName,
-                         float       scale)
+void createGifCollection(void func(SkeletonData *skeletonData, Atlas *atlas),
+                         const char *binaryName,
+                         const char *atlasName,
+                         float scale_)
 {
     SFMLTextureLoader textureLoader;
-    auto              atlas = make_unique_test<Atlas>(atlasName, &textureLoader);
+    auto atlas = make_unique_test<Atlas>(atlasName, &textureLoader);
 
-    auto skeletonData = readSkeletonBinaryData(binaryName, atlas.get(), scale);
+    auto skeletonData = readSkeletonBinaryData(binaryName, atlas.get(), scale_);
     func(skeletonData.get(), atlas.get());
 }
 
@@ -157,7 +164,7 @@ std::vector<Attributes> getAttributes(json json_object, size_t idx)
     size_t attributes_size = json_object[idx]["attributes"].size();
 
     std::vector<Attributes> attributes;
-    string                  eye_type;
+    string eye_type;
     for (int i = attributes_size - 1; i >= 0; i--)
     {
         string attribute_type = getString(json_object[idx]["attributes"][i]["trait_type"].dump());
@@ -186,17 +193,17 @@ string formatPrisionerId(string prisoner_id_str)
     return prisoner_id_str;
 }
 
-void chiguiresLoop(SkeletonData* skeletonData, Atlas* atlas)
+void chiguiresLoop(SkeletonData *skeletonData, Atlas *atlas)
 {
     SP_UNUSED(atlas);
 
-    GifManager                           gif_manager;
+    GifManager gif_manager;
     std::vector<std::vector<Attributes>> all_metadata;
-    std::ifstream                        json_file(metadata_info);
-    json                                 json_object;
+    std::ifstream json_file(metadata_info);
+    json json_object;
     json_file >> json_object;
     sf::Clock deltaClock;
-    double    init_time = deltaClock.getElapsedTime().asSeconds();
+    double init_time = deltaClock.getElapsedTime().asSeconds();
     initial_iteration = max(0, initial_iteration);
     final_iteration = min(int(json_object.size()), final_iteration + 1);
 
@@ -205,8 +212,8 @@ void chiguiresLoop(SkeletonData* skeletonData, Atlas* atlas)
         SkeletonDrawable drawable(skeletonData);
         drawable.timeScale = 1;
         drawable.setUsePremultipliedAlpha(false);
-        Skeleton*               skeleton = drawable.skeleton;
-        Skin                    skin("chiguire");
+        Skeleton *skeleton = drawable.skeleton;
+        Skin skin("chiguire");
         std::vector<Attributes> attributes;
 
         attributes = getAttributes(json_object, iteration);
@@ -220,7 +227,7 @@ void chiguiresLoop(SkeletonData* skeletonData, Atlas* atlas)
             type_id = 0;
         }
 
-        for (Attributes& attribute : attributes)
+        for (Attributes &attribute : attributes)
         {
             // Print current attributes if debug is enabled
             if (debug_attributes)
@@ -236,80 +243,11 @@ void chiguiresLoop(SkeletonData* skeletonData, Atlas* atlas)
             {
                 skin.addSkin(skeletonData->findSkin("Type/Natural Ears"));
             }
-            // Add Ears when Robot Head is None
-            else if (attribute.trait_type == "Robot Head" && attributes[type_id].value == "Robot")
-            {
-                skin.addSkin(skeletonData->findSkin("Type/Robot Ears"));
-            }
-
-            // Prisioner number
-            if (attribute.trait_type == "Body" && attributes[body_id].value == "Prisoner")
-            {
-                string prisioner_id_str = formatPrisionerId(to_string(iteration));
-
-                // Position of each number
-                for (size_t i = 1; i <= 5; i++)
-                {
-                    string number_path =
-                      "Body/Prisoner/" + to_string(i) + "/" + prisioner_id_str[5 - i];
-                    skin.addSkin(skeletonData->findSkin(number_path.c_str()));
-                }
-            }
-
-            // Bomb number
-            if (attribute.trait_type == "Robot Body" && attributes[robot_body_id].value == "Bomb")
-            {
-                string bomb_id_str = formatPrisionerId(to_string(iteration));
-
-                // Position of each number
-                for (size_t i = 1; i <= 4; i++)
-                {
-                    string number_path =
-                      "Robot Body/Bomb/" + to_string(i) + "/" + bomb_id_str[5 - i];
-                    skin.addSkin(skeletonData->findSkin(number_path.c_str()));
-                }
-            }
         }
 
         if (attributes[type_id].value == "Natural")
         {
             drawable.state->addAnimation(0, "Idle Natural", true, 0);
-        }
-        else if (attributes[type_id].value == "Evil Kermit")
-        {
-            drawable.state->addAnimation(0, "Idle Natural", false, 0);
-        }
-        else if (attributes[type_id].value == "Zuko")
-        {
-            drawable.state->addAnimation(0, "Idle Natural", false, 0);
-        }
-        else if (attributes[type_id].value == "Homer")
-        {
-            drawable.state->addAnimation(0, "Idle Natural", false, 0);
-        }
-        else if (attributes[type_id].value == "Nezuko")
-        {
-            drawable.state->addAnimation(0, "Idle Natural", false, 0);
-        }
-        else if (attributes[type_id].value == "Rick")
-        {
-            drawable.state->addAnimation(0, "Idle Natural", false, 0);
-        }
-        else if (attributes[type_id].value == "Gold Capybot")
-        {
-            drawable.state->addAnimation(0, "Idle Robot", false, 0);
-        }
-        else if (attributes[type_id].value == "Link")
-        {
-            drawable.state->addAnimation(0, "Idle Natural", false, 0);
-        }
-        else if (attributes[type_id].value == "Saiyan")
-        {
-            drawable.state->addAnimation(0, "Idle Natural", false, 0);
-        }
-        else if (attributes[type_id].value == "Neo")
-        {
-            drawable.state->addAnimation(0, "Idle Natural", false, 0);
         }
         else if (attributes[type_id].value == "Slime")
         {
@@ -319,41 +257,32 @@ void chiguiresLoop(SkeletonData* skeletonData, Atlas* atlas)
         {
             drawable.state->addAnimation(0, "Idle Robot", false, 0);
         }
-        else if (attributes[type_id].value == "Slime Tribal")
-        {
-            drawable.state->addAnimation(0, "Idle Slime", false, 0);
-        }
 
         // Skin configuration
         skeleton->setSkin(&skin);
         skeleton->setSlotsToSetupPose();
-        skeleton->setPosition(image_size / 2, image_size / 2);
+        skeleton->setPosition(IMAGE_SIZE / 2, IMAGE_SIZE / 2);
         skeleton->updateWorldTransform();
         drawable.state->setListener(callback);
 
         // Render configuration
         sf::RenderTexture texture;
-        texture.create(image_size, image_size);
+        texture.create(IMAGE_SIZE, IMAGE_SIZE);
 
         // Gif manager configuration
-        int                     delay = 3;            // * 0.01 ms = 20ms
-        float                   delta = 0.01 * delay; // ms
-        int                     quality = 30;
-        int                     size = image_size;
-        int                     num_frames = 101;
-        bool                    gloabal_color = true;
+        int delay = 3;              // * 0.01 ms = 30ms
+        float delta = 0.01 * delay; // ms
+        int quality = 30;
+        int size = IMAGE_SIZE;
+        int num_frames = 101;
+        bool gloabal_color = true;
         GifEncoder::PixelFormat Format = GifEncoder::PixelFormat::PIXEL_FORMAT_RGBA;
         gif_manager.configure(quality, delay, gloabal_color, Format, false);
 
         // Start gif creation
         if (gif_collection)
         {
-            if (custom_collection)
-            {
-                std::string gif_name = "../results/gif/0_custom.gif";
-                gif_manager.startGif(gif_name, size, size, num_frames);
-            }
-            else if (!merge_gifs)
+            if (!merge_gifs)
             {
                 std::string gif_name = output_path + std::to_string(iteration) + ".gif";
                 gif_manager.startGif(gif_name, size, size, num_frames);
@@ -362,15 +291,15 @@ void chiguiresLoop(SkeletonData* skeletonData, Atlas* atlas)
             {
                 std::string gif_name = output_path + std::to_string(0) + ".gif";
                 gif_manager.startGif(
-                  gif_name, size, size, frames_per_gif * (final_iteration - initial_iteration));
+                    gif_name, size, size, frames_per_gif * (final_iteration - initial_iteration));
                 gif_started = true;
             }
         }
 
         animation_completed = false;
         sf::Image canvas_frame;
-        bool      firsttime = true;
-        size_t    count = 0;
+        bool firsttime = true;
+        size_t count = 0;
         while (true)
         {
             // Update animation
@@ -415,14 +344,8 @@ void chiguiresLoop(SkeletonData* skeletonData, Atlas* atlas)
             if (img_collection)
             {
                 std::string img_filename;
-                if (custom_collection)
-                {
-                    img_filename = "../results/img/0_custom.jpg";
-                }
-                else
-                {
-                    img_filename = "../results/img/" + std::to_string(iteration) + ".jpg";
-                }
+                img_filename = "../results/img/" + std::to_string(iteration) + ".jpg";
+
                 canvas_frame.saveToFile(img_filename);
                 std::cout << "Finished IMG: " << img_filename << std::endl;
                 break;
@@ -440,82 +363,25 @@ void chiguiresLoop(SkeletonData* skeletonData, Atlas* atlas)
     cout << "\nTOTAL Time: " << end_time - init_time << endl;
 }
 
-void verifyIntegrity(SkeletonData* skeletonData, Atlas* atlas)
-{
-    SP_UNUSED(atlas);
-
-    GifManager                           gif_manager;
-    std::vector<std::vector<Attributes>> all_metadata;
-    std::ifstream                        json_file(metadata_info);
-    json                                 json_object;
-    json_file >> json_object;
-    sf::Clock deltaClock;
-    double    init_time = deltaClock.getElapsedTime().asSeconds();
-    initial_iteration = max(0, initial_iteration);
-    final_iteration = min(int(json_object.size()), final_iteration + 1);
-
-    for (int iteration = initial_iteration; iteration < final_iteration; iteration++)
-    {
-        SkeletonDrawable drawable(skeletonData);
-        drawable.timeScale = 1;
-        drawable.setUsePremultipliedAlpha(false);
-        Skeleton*               skeleton = drawable.skeleton;
-        Skin                    skin("chiguire");
-        std::vector<Attributes> attributes;
-
-        attributes = getAttributes(json_object, iteration);
-        size_t type_id = attributes.size() - 2;
-        size_t body_id = attributes.size() - 3;
-        size_t face_id = attributes.size() - 4;
-        size_t robot_body_id = attributes.size() - 4;
-
-        if (attributes.size() == 1)
-        {
-            type_id = 0;
-        }
-
-        for (Attributes& attribute : attributes)
-        {
-            // Add Skins
-            if (attribute.value != "None")
-            {
-                try
-                {
-                    /* code */
-                    std::cout << attribute.getFullName() << endl;
-                    skin.addSkin(skeletonData->findSkin(attribute.getFullName().c_str()));
-                }
-                catch (const std::exception& e)
-                {
-                    std::cout << "Error found: ";
-                    std::cout << attribute.getFullName() << endl;
-                }
-            }
-        }
-    }
-}
-
 DebugExtension dbgExtension(SpineExtension::getInstance());
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     // SpineExtension::setInstance(&dbgExtension);
     namespace po = boost::program_options;
     po::options_description description("Usage:");
 
     string path_scene, path_sensor_config, path_output;
-    bool   sneak_peeks = false;
+    bool sneak_peeks = false;
 
     description.add_options()("help,h", "Display this help message")(
-      "debug,d", po::bool_switch(&debug_attributes), "Create Image collection.")(
-      "custom,c", po::bool_switch(&custom_collection), "Create Custom collection.")(
-      "sneak_peeks,p", po::bool_switch(&sneak_peeks), "Create sneak_peeks collection.")(
-      "init,i", po::value<int>(), "Initial nft")("end,e", po::value<int>(), "Final nft")(
-      "single,s", po::value<int>(), "Single nft")("merge,m", po::value<int>(), "Merge gifs")(
-      "format,f", po::value<std::string>()->default_value("0.3"), "Format (scale)")(
-      "img", po::bool_switch(&img_collection), "Create Image collection.")(
-      "verify,v", po::bool_switch(&verify_collection), "Verify integrity.")(
-      "output,o", po::value<std::string>()->default_value("gif"), "Output path");
+        "debug,d", po::bool_switch(&debug_attributes), "Create Image collection.")(
+        "sneak_peeks,p", po::bool_switch(&sneak_peeks), "Create sneak_peeks collection.")(
+        "init,i", po::value<int>(), "Initial nft")("end,e", po::value<int>(), "Final nft")(
+        "single,s", po::value<int>(), "Single nft")("merge,m", po::value<int>(), "Merge gifs")(
+        "format,f", po::value<std::string>()->default_value("0.3"), "Format (scale)")(
+        "img", po::bool_switch(&img_collection), "Create Image collection.")(
+        "output,o", po::value<std::string>()->default_value("gif"), "Output path");
 
     po::variables_map vm;
     po::store(po::command_line_parser(argc, argv).options(description).run(), vm);
@@ -540,11 +406,6 @@ int main(int argc, char* argv[])
     {
         cout << "Gif Collection (default).\n";
         gif_collection = true;
-    }
-    if (custom_collection)
-    {
-        metadata_info = "../metadata/custom.json";
-        cout << "Using custom metadata file: " << metadata_info << endl;
     }
     if (sneak_peeks)
     {
@@ -590,28 +451,19 @@ int main(int argc, char* argv[])
     if (vm.count("format"))
     {
         scale_format = vm["format"].as<std::string>();
-        scale = std::stof(scale_format);
-        image_size = 2000 * scale;
+        SCALE = std::stof(scale_format);
+        IMAGE_SIZE = 2000 * SCALE;
     }
 
-    std::cout << "Start collection \n" << std::endl;
+    std::cout << "Start collection \n"
+              << std::endl;
 
     string data_path = "../runtime_data";
     string project_name = "chiguire_merge";
     string skel_name = data_path + "/" + project_name + ".skel";
     string atlas_name = data_path + "/" + project_name + scale_format + ".atlas";
 
-    if (verify_collection)
-    {
-        SFMLTextureLoader textureLoader;
-        auto              atlas = make_unique_test<Atlas>(atlas_name.c_str(), &textureLoader);
-        auto skeletonData = readSkeletonBinaryData(skel_name.c_str(), atlas.get(), scale);
-        verifyIntegrity(skeletonData.get(), atlas.get());
-        return 0;
-    }
+    createGifCollection(chiguiresLoop, skel_name.c_str(), atlas_name.c_str(), SCALE);
 
-    createGifCollection(chiguiresLoop, skel_name.c_str(), atlas_name.c_str(), scale);
-
-    // dbgExtension.reportLeaks();
     return 0;
 }
