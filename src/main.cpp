@@ -57,6 +57,8 @@ using namespace nlohmann;
 // Parameters
 std::string metadata_info = "../metadata/_metadata.json";
 std::string output_path = "../results/gif/";
+std::string data_path = "../runtime_data";
+std::string project_name = "chiguire_merge";
 std::string scale_format = "0.3";
 bool animation_completed = false;
 bool verify_collection = false;
@@ -458,8 +460,6 @@ int main(int argc, char *argv[])
     std::cout << "Start collection \n"
               << std::endl;
 
-    string data_path = "../runtime_data";
-    string project_name = "chiguire_merge";
     string skel_name = data_path + "/" + project_name + ".skel";
     string atlas_name = data_path + "/" + project_name + scale_format + ".atlas";
 
