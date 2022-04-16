@@ -35,4 +35,4 @@
 build
 
 # dep
-dependencies
+.vscode
