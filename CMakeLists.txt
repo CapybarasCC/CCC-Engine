@@ -2,6 +2,7 @@
 # First download and extract SFML 2.4.1 for the respective OS we are on
 #
 FIND_PACKAGE( Boost 1.55 COMPONENTS program_options REQUIRED )
+set(CMAKE_OSX_ARCHITECTURES "x86_64")
 
 set(DEPS_DIR "${CMAKE_CURRENT_LIST_DIR}/dependencies/")
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
@@ -95,4 +96,4 @@ endif()
 # 		COMMAND ${CMAKE_COMMAND} -E copy_directory
 # 		${CMAKE_CURRENT_LIST_DIR}/data $<TARGET_FILE_DIR:create_collection>/data)
 
-target_link_libraries(create_collection spine-sfml-cpp egif )
+target_link_libraries(create_collection spine-sfml-cpp egif program_options )

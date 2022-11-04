@@ -71,9 +71,10 @@ bool merge_gifs = false;
 int initial_iteration = 0;
 int final_iteration = 7700;
 size_t frames_per_gif = 0;
+float SCALE = 0.3;
 float IMAGE_SIZE = 2000 * SCALE;
 float delta_offset = 0;
-float SCALE = 0.3;
+
 // Parameters
 
 template <typename T, typename... Args>
