@@ -2,12 +2,11 @@
 # First download and extract SFML 2.4.1 for the respective OS we are on
 #
 FIND_PACKAGE( Boost 1.55 COMPONENTS program_options REQUIRED )
-set(CMAKE_OSX_ARCHITECTURES "x86_64")
 
 set(DEPS_DIR "${CMAKE_CURRENT_LIST_DIR}/dependencies/")
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    set(SFML_URL "http://www.sfml-dev.org/files/SFML-2.4.1-osx-clang.tar.gz")
-    set(SFML_DIR ${DEPS_DIR}/SFML-2.4.1-osx-clang)
+    set(SFML_URL "https://www.sfml-dev.org/files/SFML-2.5.1-macOS-clang.tar.gz")
+    set(SFML_DIR ${DEPS_DIR}/SFML-2.5.1-macos-clang)
 	if (NOT EXISTS "${SFML_DIR}")
 		message("Downloading SFML for Mac OS X")
 		file(DOWNLOAD "${SFML_URL}" "${DEPS_DIR}/sfml.tar.gz")
@@ -55,17 +54,17 @@ else()
 endif()
 
 # Define spine-sfml-cpp library
-include_directories(spine ${SFML_DIR}/include include include/egif ${Boost_INCLUDE_DIR})
+include_directories(src ${SFML_DIR}/include include include/egif include/spine ${Boost_INCLUDE_DIR})
 file(GLOB_RECURSE EGIF_SOURCES "include/egif/*.h" "include/egif/*.cpp" "include/*.h" "include/*.hpp")
 file(GLOB INCLUDES "include/**/*.h" "include/**/*.hpp")
-file(GLOB SOURCES "spine/*.cpp")
+file(GLOB SOURCES "src/**/*.cpp" "spine/*.cpp")
 add_library(spine-sfml-cpp STATIC ${SOURCES} ${INCLUDES})
 add_library(egif STATIC ${EGIF_SOURCES})
 target_link_libraries(spine-sfml-cpp )
 install(TARGETS spine-sfml-cpp DESTINATION dist/lib)
 install(FILES ${INCLUDES} DESTINATION dist/include)
 
-# Define spine-sfml src executable
+# Define spine-sfml example executable
 add_executable(create_collection src/main.cpp)
 
 # Link in SFML libraries and OS dependencies like OpenGL
@@ -74,7 +73,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 	find_library(SFML_SYSTEM "sfml-system" PATHS ${SFML_DIR}/Frameworks)
 	find_library(SFML_WINDOW sfml-window PATHS ${SFML_DIR}/Frameworks)
 	find_library(SFML_GRAPHICS sfml-graphics PATHS ${SFML_DIR}/Frameworks)
-	target_link_libraries(create_collection ${SFML} ${SFML_SYSTEM} ${SFML_WINDOW} ${SFML_GRAPHICS})
+	target_link_libraries(create_collection sfml-graphics sfml-window sfml-system ${Boost_LIBRARIES})
 elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 	target_link_libraries(create_collection sfml-graphics sfml-window sfml-system ${Boost_LIBRARIES})
 else()
@@ -96,4 +95,4 @@ endif()
 # 		COMMAND ${CMAKE_COMMAND} -E copy_directory
 # 		${CMAKE_CURRENT_LIST_DIR}/data $<TARGET_FILE_DIR:create_collection>/data)
 
-target_link_libraries(create_collection spine-sfml-cpp egif program_options )
+target_link_libraries(create_collection spine-sfml-cpp egif )
