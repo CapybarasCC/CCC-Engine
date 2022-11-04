@@ -221,9 +221,6 @@ void chiguiresLoop(SkeletonData *skeletonData, Atlas *atlas)
 
         attributes = getAttributes(json_object, iteration);
         size_t type_id = attributes.size() - 2;
-        size_t body_id = attributes.size() - 3;
-        size_t face_id = attributes.size() - 4;
-        size_t robot_body_id = attributes.size() - 4;
 
         if (attributes.size() == 1)
         {

@@ -59,8 +59,6 @@ bool GifManager::addFrame(sf::Image image) {
   return true;
 }
 
-void GifManager::addFrameVector(std::vector<sf::Image> frames) {}
-
 void GifManager::endGif() {
   if (!m_gif_encoder.close()) {
     fprintf(stderr, "Error close gif file\n");
