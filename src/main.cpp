@@ -58,7 +58,7 @@ using namespace nlohmann;
 std::string metadata_info = "../metadata/_metadata.json";
 std::string output_path = "../results/gif/";
 std::string data_path = "../runtime_data";
-std::string project_name = "chiguire_merge";
+std::string project_name = "ccc_demo_skeleton";
 std::string scale_format = "0.3";
 bool animation_completed = false;
 bool verify_collection = false;
